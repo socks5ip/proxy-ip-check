@@ -1,7 +1,7 @@
 {
   "name": "proxy-ip-check",
-  "version": "1.0.0",
-  "description": "Identify an IP's ASN owner, network type (consumer vs hosting) and country — zero dependencies, DNS-based, no API key required.",
+  "version": "1.0.1",
+  "description": "Identify an IP's ASN owner, ISP, country and network type (consumer vs hosting vs proxy) from the command line. Zero dependencies, no API key.",
   "main": "index.js",
   "bin": {
     "proxy-ip-check": "index.js"
@@ -21,15 +21,18 @@
     "geoip",
     "cybersecurity"
   ],
-  "author": "socks5ip <https://socks5ip.com.cn>",
+  "author": {
+    "name": "socks5ip",
+    "url": "https://socks5ip.com.cn"
+  },
   "license": "MIT",
   "homepage": "https://socks5ip.com.cn/ip-check-center/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/socks5ip/proxy-ip-pricing.git"
+    "url": "git+https://github.com/socks5ip/proxy-ip-check.git"
   },
   "bugs": {
-    "url": "https://github.com/socks5ip/proxy-ip-pricing/issues"
+    "url": "https://github.com/socks5ip/proxy-ip-check/issues"
   },
   "engines": {
     "node": ">=12"
