@@ -128,6 +128,7 @@ Part of a small open toolset for proxy IP work:
 - **IP quality & line check center** (free, browser-based — adds blocklist checks, leak tests and IP type databases on top of the ASN signal): https://socks5ip.com.cn/ip-check-center/
 - **Proxy IP pricing dataset** (18 providers, machine-readable): https://github.com/socks5ip/proxy-ip-pricing
 - **Awesome proxy providers list**: https://github.com/socks5ip/awesome-proxy-providers
+- **Source code of this tool**: https://github.com/socks5ip/proxy-ip-check
 
 ## License
 
