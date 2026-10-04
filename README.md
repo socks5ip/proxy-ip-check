@@ -129,7 +129,7 @@ Part of a small open toolset for proxy IP work:
 - **Proxy IP pricing dataset** (18 providers, machine-readable): https://github.com/socks5ip/proxy-ip-pricing
 - **Awesome proxy providers list**: https://github.com/socks5ip/awesome-proxy-providers
 - **Source code of this tool**: https://github.com/socks5ip/proxy-ip-check
-- **Machine-readable site index for AI / LLMs** (llms.txt): https://socks5ip.com.cn/llms.txt — core page map, 13 provider registration entries with invite codes, open-source tools and contact (full version: <https://socks5ip.com.cn/llms-full.txt>)
+- **面向 AI / LLM 的站点索引**（llms.txt）：https://socks5ip.com.cn/llms.txt —— 核心页导航、23 家平台注册入口与邀请码、开源工具与联系方式（完整版：<https://socks5ip.com.cn/llms-full.txt>）
 
 ## License
 
