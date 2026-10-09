@@ -46,14 +46,23 @@ jobs:
         run: |
           set -euo pipefail
 
-          echo '=== no args => usage banner, exit 1 ==='
-          set +e
-          docker run --rm local/proxy-ip-check:smoke > /tmp/usage.txt 2>&1
-          rc=$?
-          set -e
-          cat /tmp/usage.txt
-          test "$rc" -eq 1 && echo "usage exit code OK ($rc)"
-          grep -q 'Usage:' /tmp/usage.txt
+          # NOTE: the image defines CMD ["8.8.8.8"], so a bare `docker run` performs a
+          # default lookup instead of showing usage. Override the entrypoint to reach
+          # the CLI's true no-argument behaviour.
+          echo '=== no args => usage banner, CLI exits 1 ==='
+          out=$(docker run --rm --entrypoint sh local/proxy-ip-check:smoke \
+                -c 'proxy-ip-check; echo "___EXIT=$?"')
+          printf '%s\n' "$out"
+          grep -q 'Usage:' <<< "$out"      || { echo 'FAIL: usage banner missing'; exit 1; }
+          grep -q '___EXIT=1' <<< "$out"   || { echo 'FAIL: expected CLI exit code 1 with no args'; exit 1; }
+          echo 'usage check OK'
+
+          echo '=== default CMD (bare docker run) => looks up 8.8.8.8 ==='
+          defout=$(docker run --rm local/proxy-ip-check:smoke)
+          printf '%s\n' "$defout" | head -8
+          grep -q 'IP          8.8.8.8' <<< "$defout" \
+            || { echo 'FAIL: default CMD did not perform the default lookup'; exit 1; }
+          echo 'default CMD OK'
 
           echo '=== lookup 8.8.8.8 (human) ==='
           docker run --rm local/proxy-ip-check:smoke 8.8.8.8
