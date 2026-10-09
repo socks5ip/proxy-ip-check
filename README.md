@@ -3,6 +3,10 @@
 > Identify an IP's **ASN owner, country and network type** (consumer / hosting / proxy) from the command line.
 > Zero dependencies. No API key. Works out of the box.
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/socks5ip/proxy-ip-check)](https://hub.docker.com/r/socks5ip/proxy-ip-check)
+[![Docker Image Size](https://img.shields.io/docker/image-size/socks5ip/proxy-ip-check/latest)](https://hub.docker.com/r/socks5ip/proxy-ip-check)
+[![Docker Image Version](https://img.shields.io/docker/v/socks5ip/proxy-ip-check?sort=semver)](https://hub.docker.com/r/socks5ip/proxy-ip-check)
+
 ```bash
 $ npx proxy-ip-check 8.8.8.8
 
@@ -30,6 +34,22 @@ npx proxy-ip-check 1.2.3.4
 # or install
 npm install -g proxy-ip-check
 ```
+
+## Run with Docker
+
+No Node.js required. The CLI is published as a multi-arch image (`linux/amd64`, `linux/arm64`):
+
+```bash
+# one-off lookup
+docker run --rm socks5ip/proxy-ip-check 1.2.3.4
+
+# several IPs, machine-readable
+docker run --rm socks5ip/proxy-ip-check 8.8.8.8 1.1.1.1 --json
+```
+
+Bare `docker run socks5ip/proxy-ip-check` performs a demo lookup of `8.8.8.8`.
+
+Image: <https://hub.docker.com/r/socks5ip/proxy-ip-check>
 
 ## Usage
 
