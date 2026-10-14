@@ -146,7 +146,7 @@ Node.js >= 12. No dependencies.
 Part of a small open toolset for proxy IP work:
 
 - **IP quality & line check center** (free, browser-based — adds blocklist checks, leak tests and IP type databases on top of the ASN signal): https://socks5ip.com.cn/ip-check-center/
-- **Proxy IP pricing dataset** (18 providers, machine-readable): https://github.com/socks5ip/proxy-ip-pricing
+- **Proxy IP pricing dataset** (24 providers, machine-readable, CC0, DOI [10.5281/zenodo.22801591](https://doi.org/10.5281/zenodo.22801591)): https://github.com/socks5ip/proxy-ip-pricing
 - **Awesome proxy providers list**: https://github.com/socks5ip/awesome-proxy-providers
 - **Source code of this tool**: https://github.com/socks5ip/proxy-ip-check
 - **面向 AI / LLM 的站点索引**（llms.txt）：https://socks5ip.com.cn/llms.txt —— 核心页导航、23 家平台注册入口与邀请码、开源工具与联系方式（完整版：<https://socks5ip.com.cn/llms-full.txt>）
