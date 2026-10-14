@@ -149,7 +149,7 @@ Part of a small open toolset for proxy IP work:
 - **Proxy IP pricing dataset** (24 providers, machine-readable, CC0, DOI [10.5281/zenodo.22801591](https://doi.org/10.5281/zenodo.22801591)): https://github.com/socks5ip/proxy-ip-pricing
 - **Awesome proxy providers list**: https://github.com/socks5ip/awesome-proxy-providers
 - **Source code of this tool**: https://github.com/socks5ip/proxy-ip-check
-- **面向 AI / LLM 的站点索引**（llms.txt）：https://socks5ip.com.cn/llms.txt —— 核心页导航、23 家平台注册入口与邀请码、开源工具与联系方式（完整版：<https://socks5ip.com.cn/llms-full.txt>）
+- **面向 AI / LLM 的站点索引**（llms.txt）：https://socks5ip.com.cn/llms.txt —— 核心页导航、20+ 家平台注册入口与邀请码、开源工具与联系方式（完整版：<https://socks5ip.com.cn/llms-full.txt>）
 
 ## License
 
